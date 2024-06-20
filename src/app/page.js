@@ -1,113 +1,127 @@
-import Image from 'next/image'
+// page.js
+import React from 'react';
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <div className="flex flex-col md:flex-row min-h-screen">
+      <div className="w-full md:min-h-screen md:w-1/2 overflow-hidden">
+        <video
+          src="/video.mp4"
+          autoPlay
+          loop
+          muted
+          className="h-full object-cover"
         />
       </div>
+      <div className="w-full md:w-1/2 bg-white p-8 md:p-20">
+        <h1 className="text-4xl font-bold mb-4">🪸 MySeaDrive</h1>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="my-12">
+            <h2 className="text-xl font-semibold mb-2"> What is MySeaDrive? </h2>
+            <div>
+              <p>
+                MySeaDrive is an online home for your personal diving media. </p> 
+                <br/>
+                <p>
+                  A place to store, organize, edit and share diving media for your <em>entire diving lifetime</em>!
+              </p>
+            </div>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="my-12">
+            <h2 className="text-xl font-semibold mb-2"> Why might I need this? </h2>
+            <div> 
+              <p>
+                If you've been diving for a while, you'll probably relate with the problems below.
+              </p>
+              <br/>
+              <ul className="list-disc ml-6">
+                <li className='mb-6'>
+                  You have hundreds of <b>videos and photos scattered</b> across memory cards, hard-drives and laptops making them hard to find.
+                </li>
+                
+                <li className='mb-6'>
+                  Diving media usually gets <b>mixed up and grouped into vacation albums</b> unless you put in extra work to categorize them. 
+                  <br/> Also, dive info (site, weights, depth) remains disconnected from your media!
+                </li>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                <li className='mb-6'>
+                  Which video was it where you saw the Manta? Was it at the 1:45s mark or 3:30s?
+                  <br/> <b>Finding highlights becomes a challenge</b> involving checking multiple files multiple times.
+                </li>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+                <li className='mb-6'>
+                  <b>Raw footage is generally not impressive</b> and looks bleached unless you edit and color correct it. And you'll need to use different tools to get all these done.
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div className="my-12">
+            <h2 className="text-xl font-semibold mb-2"> So what does MySeaDrive exactly do? </h2>
+            <div> 
+              Think of MySeaDrive as Google Photos but made just for diving media.
+              <ul className="list-disc ml-6 mt-6">
+                <li className='mb-6'>
+                  <b>Backup every single photo and video</b> you've taken without worrying about storage. Search and find them later in an instant.
+                </li>
+                <li className='mb-6'>
+                  Effortlessly <b>organize your media</b> into dives. Go further: tag dive site names, tank levels, depth, fish IDs and notes too.
+                </li>
+                <li className='mb-6'>
+                  Easily <b>favorite your most interesting media</b>. Add remarks down to the exact second. Build a highlights reel without breaking a sweat.
+                </li>
+                <li className='mb-6'>
+                  All your media <b>automatically gets corrected for color and contrast</b> while you retain full control over originals. Made perfect for sharing with the world.
+                </li>
+
+
+              </ul>
+
+            </div>
+        </div>
+
+        <div className="my-12">
+            <h2 className="text-xl font-semibold mb-2"> Who is building this and why? </h2>
+            <div> 
+              <p>
+                I'm Harsha, an outdoor enthusiast who fell love in love with the ocean on my first dive back in 2017. Got certified as AOWD 6 months later and have dived in 9 countries so far.
+              </p>
+              <br/>
+                <p>I also happen to be a software engineer and a product manager in my day job. So I'm fully capable of seeing this vision through.</p>
+              <br/>
+              <p>
+                MySeaDrive is a tool I <i>personally</i> need. And I think it will help a lot of people like me.
+              </p>
+              <br/>
+              <p>
+                Most importantly building MySeaDrive is a way of expressing my love for the ocean!
+              </p>
+            </div>
+        </div>
+
+        <div className="my-12">
+            <h2 className="text-xl font-semibold mb-2"> Where can I try it and what'll it cost? </h2>
+            <div>
+              <p>
+                I'm chalking up the roadmap to ship the first version by August. The whole tool will be <b>open-sourced</b>. That's the best approach in my opinion where there are no secrets. And you can host one all by yourself if you don't want to pay.
+              </p>
+              <br/>
+              <p>
+                While I'm not sure of the exact cost for the hosted version, I'll ensure it stays very affordable by making frugal choices about storage and server infrastructure.
+              </p>
+            </div>
+        </div>
+
+        <div className="my-12">
+          <p className='text-center'>
+            ❤️ for the 🌊
           </p>
-        </a>
+        </div>
+        
       </div>
-    </main>
-  )
-}
+    </div>
+  );
+};
+
+export default Home;
